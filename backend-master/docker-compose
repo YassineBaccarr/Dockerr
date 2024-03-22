@@ -2,7 +2,7 @@ services:
 
 #Spring Boot Application
    spring-boot-app:
-     image:backend
+     image: backend
      ports: 
        - "0.0.0.0:8091:8091"
      environment:
@@ -20,12 +20,12 @@ mysql:
   restart: always
   environment:
     MYSQL_DATABASE: 'api_etudiant'
-    MYSQL_ROOT_USERNAME:'root'
-    MYSQL_ROOT_PASSWORD:'root'
+    MYSQL_ROOT_USERNAME: 'root'
+    MYSQL_ROOT_PASSWORD: 'root'
   ports:
-    -'0.0.0.0:3306:3306
+    -'0.0.0.0:3306:3306'
   volumes:
-    -api_etudiant:/var/lib/mysql
+    - api_etudiant:/var/lib/mysql
 # liste des volumes
 volumes:
   api_etudiant:
